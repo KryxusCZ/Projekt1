@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Produkty</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"/>
+    <link rel="stylesheet" href="css/fontawesome.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body id="reportsPage">
+    <nav class="navbar navbar-expand-xl">
+      <div class="container h-100">
+        <a class="navbar-brand" href="../eshop.html">
+          <h1 class="tm-site-title mb-0">Přijít na eshop</h1>
+      </a>
+        <button class="navbar-toggler ml-auto mr-0" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars tm-nav-icon"></i>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto h-100">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">
+                        <i class="fas fa-tachometer-alt"></i>
+                        Hlavní strana
+                        <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="far fa-file-alt"></i>
+                        <span>
+                            Report <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Denní Report</a>
+                        <a class="dropdown-item" href="#">Týdenní Report</a>
+                        <a class="dropdown-item" href="#">Roční Report</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="products.html">
+                        <i class="fas fa-shopping-cart"></i>
+                        Produkty
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="accounts.html">
+                        <i class="far fa-user"></i>
+                        Účet
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cog"></i>
+                        <span>
+                            Nastavení <i class="fas fa-angle-down"></i>
+                        </span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Profil</a>
+                        <a class="dropdown-item" href="#">Účtování</a>
+                        <a class="dropdown-item" href="#">Přizpůsobení</a>
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link d-block" href="login.html" onclick="deleteToken()">
+                        Admin, <b>Odhlásit se</b>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <div class="row tm-content-row">
+        <div class="col-sm-12 col-md-12 col-lg-8 col-xl-8 tm-block-col">
+          <div class="tm-bg-primary-dark tm-block tm-block-products">
+            <div class="tm-product-table-container">
+              <table class="table table-hover tm-table-small tm-product-table">
+                <thead>
+                  <tr>
+                   
+                    <th scope="col">NÁZEV</th>
+                    <th scope="col">KÓD</th>
+                    <th scope="col">CENA</th>
+                    <th scope="col">KATEGORIE</th>
+                    <th scope="col">MNOŽSTVÍ</th>
+                    <th scope="col"></th>
+                    <th scope="col"></th>
+                  </tr>
+                </thead>
+                <tbody id="productContainer">
+          
+
+                </tbody>
+              </table>
+            </div>
+            <a
+              href="add-product.html"
+              class="btn btn-primary btn-block text-uppercase mb-3">Přidat produkt</a>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-12 col-lg-4 col-xl-4 tm-block-col">
+          <div class="tm-bg-primary-dark tm-block tm-block-product-categories">
+            <h2 class="tm-block-title">Kategorie produktů</h2>
+            <div class="tm-product-table-container">
+              <table class="table tm-table-small tm-product-table">
+                <tbody id="categoryContainer">
+                  
+                </tbody>
+              </table>
+            </div>
+            <a class="btn btn-primary btn-block text-uppercase mb-3" href="add-category.html">
+              Přidat Kategorii
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="getProducts.js"></script>
+    <script src="getCategories.js"></script>
+    
+  </body>
+</html>
